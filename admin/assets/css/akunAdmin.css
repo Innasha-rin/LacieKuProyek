@@ -1,0 +1,381 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+}
+
+/* Header styles for responsive navigation */
+header {
+  position: relative;
+  z-index: 1000;
+}
+
+/* Profile container */
+.profile-container {
+  background-color: #cee397;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  padding: 20px;
+  justify-content: center; /* Center content vertically on desktop */
+}
+
+/* Back button */
+.back-button {
+  color: #fff;
+  font-size: 24px;
+  margin-bottom: 20px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  width: fit-content;
+  display: flex;
+  align-items: center;
+}
+
+/* Profile card */
+.profile-card {
+  border-radius: 50px;
+  padding: 40px;
+  max-width: 846px;
+  margin: 0 auto;
+  width: 100%;
+  background-color: #fff;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Profile content */
+.profile-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Profile avatar */
+.profile-avatar {
+  width: 179px;
+  height: 179px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  background-color: #8bcdcd;
+  overflow: hidden;
+}
+
+.profile-avatar img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+/* Profile icon */
+.profile-icon {
+  color: #fff;
+  font-size: 80px;
+}
+
+/* Profile name */
+.profile-name {
+  font-size: 24px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  text-align: center;
+  word-wrap: break-word;
+}
+
+/* Profile badge */
+.profile-badge {
+  color: #fff;
+  padding: 5px 15px;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 30px;
+  background-color: #8bcdcd;
+  text-align: center;
+}
+
+/* Profile form */
+.profile-form {
+  width: 100%;
+  max-width: 400px;
+}
+
+/* Form item */
+.form-item {
+  margin-bottom: 20px;
+  width: 100%;
+}
+
+/* Form label */
+.form-label {
+  color: #333;
+  margin-bottom: 8px;
+  font-size: 14px;
+  display: block;
+  font-weight: 500;
+}
+
+/* Form input */
+.form-input {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 4px;
+  font-size: 14px;
+  background-color: #f5f5f5;
+  border: 1px solid #e0e0e0;
+  transition: border-color 0.3s ease;
+}
+
+.form-input:focus {
+  outline: none;
+  border-color: #8bcdcd;
+}
+
+/* Logout button */
+.logout-button {
+  width: 100%;
+  padding: 12px;
+  color: #ffffff;
+  border: none;
+  border-radius: 15px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 20px;
+  background-color: #cee397;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #b8d080;
+}
+
+/* Desktop specific adjustments */
+@media (min-width: 992px) {
+  .profile-container {
+      padding: 40px;
+      justify-content: center;
+  }
+  
+  .profile-card {
+      padding: 60px;
+      max-width: 600px;
+  }
+  
+  .profile-avatar {
+      width: 200px;
+      height: 200px;
+      margin-bottom: 30px;
+  }
+  
+  .profile-name {
+      font-size: 28px;
+      margin-bottom: 15px;
+  }
+  
+  .profile-badge {
+      font-size: 16px;
+      padding: 8px 20px;
+      margin-bottom: 40px;
+  }
+  
+  .profile-form {
+      max-width: 450px;
+  }
+  
+  .form-item {
+      margin-bottom: 25px;
+  }
+  
+  .form-label {
+      font-size: 16px;
+      margin-bottom: 10px;
+  }
+  
+  .form-input {
+      padding: 15px;
+      font-size: 16px;
+      border-radius: 8px;
+  }
+  
+  .logout-button {
+      padding: 15px;
+      font-size: 18px;
+      margin-top: 30px;
+      border-radius: 20px;
+  }
+}
+/* Tablet styles */
+@media (max-width: 991px) and (min-width: 641px) {
+  .profile-container {
+      padding: 15px;
+      padding-top: 70px;
+      justify-content: flex-start;
+  }
+
+  .profile-card {
+      padding: 30px;
+      border-radius: 30px;
+      margin: 0 10px;
+      margin-top: 20px;
+  }
+
+  .profile-avatar {
+      width: 150px;
+      height: 150px;
+  }
+
+  .profile-icon {
+      font-size: 70px;
+  }
+
+  .profile-name {
+      font-size: 22px;
+  }
+
+  .form-input {
+      max-width: 100%;
+  }
+
+  .logout-button {
+      max-width: 100%;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 640px) {
+  .profile-container {
+      padding: 10px;
+      padding-top: 80px;
+      justify-content: flex-start;
+  }
+
+  .profile-card {
+      padding: 20px;
+      border-radius: 20px;
+      margin: 0 5px;
+      margin-top: 10px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+
+  .profile-avatar {
+      width: 120px;
+      height: 120px;
+      margin-bottom: 15px;
+  }
+
+  .profile-icon {
+      font-size: 60px;
+  }
+
+  .profile-name {
+      font-size: 20px;
+      margin-bottom: 8px;
+  }
+
+  .profile-badge {
+      font-size: 12px;
+      padding: 4px 12px;
+      margin-bottom: 25px;
+  }
+
+  .form-item {
+      margin-bottom: 15px;
+  }
+
+  .form-label {
+      font-size: 13px;
+      margin-bottom: 6px;
+  }
+
+  .form-input {
+      padding: 10px;
+      font-size: 14px;
+      border-radius: 6px;
+  }
+
+  .logout-button {
+      padding: 12px;
+      font-size: 15px;
+      margin-top: 15px;
+      border-radius: 12px;
+  }
+}
+
+/* Extra small mobile styles */
+@media (max-width: 480px) {
+  .profile-container {
+      padding: 8px;
+      padding-top: 70px;
+  }
+
+  .profile-card {
+      padding: 15px;
+      border-radius: 15px;
+      margin: 0;
+      margin-top: 5px;
+  }
+
+  .profile-avatar {
+      width: 100px;
+      height: 100px;
+  }
+
+  .profile-icon {
+      font-size: 50px;
+  }
+
+  .profile-name {
+      font-size: 18px;
+  }
+
+  .profile-badge {
+      font-size: 11px;
+      padding: 3px 10px;
+  }
+
+  .form-input {
+      padding: 8px;
+      font-size: 13px;
+  }
+
+  .logout-button {
+      padding: 10px;
+      font-size: 14px;
+  }
+}
+
+/* Landscape orientation adjustments for mobile */
+@media (max-width: 640px) and (orientation: landscape) {
+  .profile-container {
+      padding-top: 60px;
+  }
+
+  .profile-avatar {
+      width: 80px;
+      height: 80px;
+      margin-bottom: 10px;
+  }
+
+  .profile-name {
+      font-size: 18px;
+      margin-bottom: 5px;
+  }
+
+  .profile-badge {
+      margin-bottom: 15px;
+  }
+
+  .form-item {
+      margin-bottom: 12px;
+  }
+}

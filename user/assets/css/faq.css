@@ -1,0 +1,114 @@
+  /* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.4;
+}
+
+/* Page container */
+.page-container {
+  background-color: #cee397;
+  min-height: 850px;
+  padding: 90px 100px;
+  box-sizing: border-box;
+}
+
+/* Content wrapper */
+.content-wrapper {
+  border-radius: 50px;
+  padding: 27px 88px;
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* Page title */
+.page-title {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 36px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+/* FAQ grid layout */
+.faq-grid {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+/* FAQ card */
+.faq-card {
+  width: 400px;
+  border-radius: 20px;
+  padding: 17px;
+  box-sizing: border-box;
+  background-color: #8bcdcd;
+}
+
+/* Card content */
+.card-content {
+  color: #000;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+}
+
+/* Category title */
+.category-title {
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 32px;
+}
+.faq-list {
+  padding-left: 20px; /* Beri sedikit indentasi */
+  list-style-type: disc; /* Bullet berbentuk bulatan */
+}
+
+.faq-item {
+  margin-bottom: 12px;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .page-container {
+    padding: 80px 40px;
+  }
+
+  .content-wrapper {
+    padding: 20px 40px;
+  }
+
+  .faq-grid {
+    gap: 20px;
+  }
+}
+
+@media (max-width: 640px) {
+  .page-container {
+    padding: 40px 20px;
+  }
+
+  .content-wrapper {
+    padding: 20px;
+    border-radius: 30px;
+  }
+
+  .page-title {
+    font-size: 28px;
+    margin-bottom: 30px;
+  }
+
+  .faq-card {
+    width: 100%;
+  }
+}

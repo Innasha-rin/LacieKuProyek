@@ -1,0 +1,99 @@
+/* Payment Confirmation Styles */
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+  
+  .confirmation-container {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    background-color: #cee397;
+  }
+  
+  .confirmation-card {
+    width: 100%;
+    max-width: 846px;
+    border-radius: 50px;
+    padding: 60px 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #ffffff;
+  }
+  
+  .confirmation-title {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 40px;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .confirmation-subtitle {
+    color: #000000;
+    font-family: "Inter", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    text-align: center;
+    margin-bottom: 40px;
+  }
+  
+  .confirmation-button {
+    color: #ffffff;
+    font-family: "Inter", sans-serif;
+    font-size: 15px;
+    font-weight: 300;
+    padding: 8px 47px;
+    border-radius: 8px;
+    cursor: pointer;
+    background-color: #cee397;
+    border: none;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 991px) {
+    .confirmation-card {
+      max-width: 90%;
+      padding: 40px 20px;
+    }
+  
+    .confirmation-title {
+      font-size: 32px;
+    }
+  
+    .confirmation-subtitle {
+      font-size: 18px;
+    }
+  }
+  
+  @media (max-width: 640px) {
+    .confirmation-card {
+      max-width: 100%;
+      padding: 30px 15px;
+      border-radius: 30px;
+    }
+  
+    .confirmation-title {
+      font-size: 24px;
+      padding: 0 10px;
+    }
+  
+    .confirmation-subtitle {
+      font-size: 16px;
+      padding: 0 10px;
+    }
+  
+    .confirmation-button {
+      width: 100%;
+      max-width: 200px;
+    }
+  }
+  

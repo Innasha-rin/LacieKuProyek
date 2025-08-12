@@ -1,0 +1,518 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  color: #000;
+  min-height: 100vh;
+}
+
+.notification-page {
+  background-color: rgba(206, 227, 151, 1);
+  padding: 80px 80px 41px;
+  overflow: hidden;
+  min-height: 100vh;
+}
+
+/* Updated notification container with better mobile support */
+.notification-container {
+  border-radius: 50px;
+  background-color: #fff;
+  display: flex;
+  padding: 27px 80px;
+  flex-direction: column;
+  align-items: stretch;
+  max-height: 80vh;
+  min-height: 500px;
+}
+
+.notification-title {
+  font-size: 40px;
+  font-weight: 700;
+  align-self: center;
+  margin-bottom: 20px;
+}
+
+/* Desktop table layout */
+.notification-table {
+  background-color: #fff;
+  margin-top: 20px;
+  width: 100%;
+  font-size: 20px;
+  font-weight: 500;
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+  min-height: 0;
+}
+
+.table-header {
+  background-color: rgba(243, 243, 232, 1);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  white-space: nowrap;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  padding-right: 20px;
+  flex-shrink: 0;
+}
+
+.table-cell {
+  align-self: stretch;
+  min-width: 240px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  gap: 10px;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+/* Mobile card layout - hidden by default */
+.mobile-notification-list {
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  padding: 20px 0;
+  flex: 1;
+  overflow-y: auto;
+  max-height: calc(100vh - 200px);
+}
+
+.mobile-notification-card {
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  cursor: pointer;
+  position: relative;
+  animation: slideInUp 0.3s ease forwards;
+}
+
+.mobile-notification-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+.mobile-notification-card.unread {
+  border-left: 4px solid #2196F3;
+  background: linear-gradient(90deg, #e3f2fd 0%, #ffffff 100%);
+}
+
+.mobile-notification-card.read {
+  border-left: 4px solid #4CAF50;
+  background: #f9f9f9;
+}
+
+.mobile-card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+}
+
+.mobile-card-number {
+  background: #f0f0f0;
+  color: #666;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: 600;
+}
+
+.mobile-card-status {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.mobile-card-status.unread {
+  background-color: #ff9800;
+  color: white;
+}
+
+.mobile-card-status.read {
+  background-color: #4caf50;
+  color: white;
+}
+
+.mobile-card-content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.mobile-card-time {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+}
+
+.mobile-card-date {
+  font-size: 14px;
+  color: #666;
+}
+
+.mobile-card-icon {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #ff4444;
+  display: none;
+}
+
+.mobile-notification-card.unread .mobile-card-icon {
+  display: block;
+}
+
+/* Enhanced notification rows container */
+#notificationRows {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: auto;
+  max-height: 60vh;
+  min-height: 200px;
+  border: 1px solid #e0e0e0;
+  border-radius: 8px;
+  position: relative;
+  background: #ffffff;
+  
+  scrollbar-width: thin;
+  scrollbar-color: #c0c0c0 #f0f0f0;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+}
+
+#notificationRows::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+#notificationRows::-webkit-scrollbar-track {
+  background: #f0f0f0;
+  border-radius: 4px;
+}
+
+#notificationRows::-webkit-scrollbar-thumb {
+  background: #c0c0c0;
+  border-radius: 4px;
+  transition: background 0.3s ease;
+}
+
+#notificationRows::-webkit-scrollbar-thumb:hover {
+  background: #a0a0a0;
+}
+
+.table-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  cursor: pointer;
+  padding-right: 20px;
+  transition: background-color 0.2s ease;
+  min-height: 50px;
+  border-bottom: 1px solid #f0f0f0;
+  animation: fadeInUp 0.3s ease forwards;
+}
+
+.table-row:last-child {
+  border-bottom: none;
+}
+
+.table-row a {
+  display: flex;
+  width: 100%;
+  text-decoration: none;
+  color: inherit;
+  justify-content: space-between;
+}
+
+.table-row:hover {
+  background-color: rgba(243, 243, 232, 0.5);
+}
+
+.table-row.unread {
+  background-color: #e3f2fd;
+  font-weight: bold;
+}
+
+.table-row.read {
+  background-color: #f5f5f5;
+}
+
+.status-badge {
+  padding: 4px 8px;
+  border-radius: 12px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.status-badge.unread {
+  background-color: #ff9800;
+  color: white;
+}
+
+.status-badge.read {
+  background-color: #4caf50;
+  color: white;
+}
+
+.loading-indicator, .no-notifications {
+  text-align: center;
+  padding: 2rem;
+  color: #666;
+}
+
+.no-notifications {
+  text-align: center;
+  padding: 40px 20px;
+  color: #6c757d;
+  font-style: italic;
+}
+
+.error-message {
+  text-align: center;
+  padding: 1rem;
+  color: #d32f2f;
+  background-color: #ffebee;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.cell-centered {
+  text-align: center;
+}
+
+.cell-right {
+  text-align: right;
+}
+
+/* Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet adjustments */
+@media (max-width: 1024px) {
+  .notification-page {
+    padding: 60px 40px 30px;
+  }
+  
+  .notification-container {
+    padding: 20px 40px;
+    border-radius: 30px;
+  }
+  
+  .notification-title {
+    font-size: 32px;
+  }
+  
+  .table-cell {
+    min-width: 180px;
+    font-size: 18px;
+  }
+}
+
+/* Mobile responsive breakpoints */
+@media (max-width: 768px) {
+  .notification-page {
+    padding: 20px 15px;
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .notification-container {
+    max-width: 100%;
+    padding: 20px 15px;
+    max-height: calc(100vh - 40px);
+    border-radius: 20px;
+    min-height: calc(100vh - 40px);
+  }
+
+  .notification-title {
+    font-size: 28px;
+    margin-bottom: 15px;
+  }
+
+  /* Hide desktop table on mobile */
+  .notification-table {
+    display: none;
+  }
+
+  /* Show mobile card layout */
+  .mobile-notification-list {
+    display: flex;
+    max-height: calc(100vh - 140px);
+  }
+
+  .mobile-notification-card {
+    margin-bottom: 5px;
+  }
+
+  .mobile-card-time {
+    font-size: 15px;
+  }
+
+  .mobile-card-date {
+    font-size: 13px;
+  }
+}
+
+/* Small mobile devices */
+@media (max-width: 480px) {
+  .notification-page {
+    padding: 15px 10px;
+  }
+
+  .notification-container {
+    padding: 15px 10px;
+    border-radius: 15px;
+    max-height: calc(100vh - 30px);
+    min-height: calc(100vh - 30px);
+  }
+
+  .notification-title {
+    font-size: 24px;
+    margin-bottom: 15px;
+  }
+
+  .mobile-notification-list {
+    gap: 10px;
+    padding: 10px 0;
+    max-height: calc(100vh - 120px);
+  }
+
+  .mobile-notification-card {
+    padding: 12px;
+    border-radius: 10px;
+  }
+
+  .mobile-card-header {
+    margin-bottom: 8px;
+  }
+
+  .mobile-card-number {
+    font-size: 11px;
+    padding: 3px 6px;
+  }
+
+  .mobile-card-status {
+    font-size: 11px;
+    padding: 3px 8px;
+  }
+
+  .mobile-card-time {
+    font-size: 14px;
+  }
+
+  .mobile-card-date {
+    font-size: 12px;
+  }
+}
+
+/* Extra small devices */
+@media (max-width: 360px) {
+  .notification-page {
+    padding: 10px 5px;
+  }
+
+  .notification-container {
+    padding: 12px 8px;
+    border-radius: 12px;
+  }
+
+  .notification-title {
+    font-size: 20px;
+  }
+
+  .mobile-notification-card {
+    padding: 10px;
+  }
+
+  .mobile-card-content {
+    gap: 6px;
+  }
+}
+
+/* Long screens optimization */
+@media (max-height: 640px) and (max-width: 768px) {
+  .notification-container {
+    max-height: calc(100vh - 30px);
+    min-height: calc(100vh - 30px);
+  }
+
+  .mobile-notification-list {
+    max-height: calc(100vh - 110px);
+  }
+
+  .notification-title {
+    font-size: 24px;
+    margin-bottom: 10px;
+  }
+}
+
+/* Very tall screens optimization */
+@media (min-height: 900px) and (max-width: 768px) {
+  .mobile-notification-list {
+    max-height: calc(100vh - 160px);
+  }
+}
+
+/* Landscape orientation on mobile */
+@media (max-width: 768px) and (orientation: landscape) {
+  .notification-page {
+    padding: 10px;
+  }
+
+  .notification-container {
+    max-height: calc(100vh - 20px);
+    min-height: calc(100vh - 20px);
+    padding: 15px;
+  }
+
+  .notification-title {
+    font-size: 22px;
+    margin-bottom: 10px;
+  }
+
+  .mobile-notification-list {
+    max-height: calc(100vh - 80px);
+    gap: 8px;
+  }
+
+  .mobile-notification-card {
+    padding: 10px;
+  }
+}

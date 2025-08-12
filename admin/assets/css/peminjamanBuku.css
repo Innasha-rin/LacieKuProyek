@@ -1,0 +1,158 @@
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+}
+
+/* Main container */
+.book-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #cee397;
+}
+
+/* Card styles */
+.book-card {
+  width: 846px;
+  height: 652px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px;
+  background-color: #ffffff;
+}
+
+/* Title styles */
+.book-title {
+  color: #000000;
+  font-size: 40px;
+  font-weight: 700;
+  margin-top: 38px;
+  margin-bottom: 103px;
+}
+
+/* Subtitle styles */
+.book-subtitle {
+  color: #000000;
+  font-size: 15px;
+  font-weight: 400;
+  margin-bottom: 58px;
+}
+
+/* Form styles */
+form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+}
+
+/* Input container */
+.input-wrapper {
+  width: 314px;
+  height: 59px;
+  margin-bottom: 58px;
+}
+
+/* Input field */
+.book-input {
+  width: 100%;
+  height: 100%;
+  border: none;
+  border-radius: 8px;
+  padding: 0 27px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+  background-color: #f3f3e8;
+}
+
+/* Button wrapper */
+.button-wrapper {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Search button */
+.search-button {
+  width: 96px;
+  height: 44px;
+  border: none;
+  border-radius: 8px;
+  color: #ffffff;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 400;
+  cursor: pointer;
+  background-color: #cee397;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .book-card {
+    width: 80%;
+    height: auto;
+    padding: 30px;
+  }
+
+  .book-title {
+    font-size: 32px;
+    margin-bottom: 60px;
+  }
+
+  .input-wrapper {
+    width: 80%;
+  }
+}
+
+@media (max-width: 640px) {
+  .book-card {
+    width: 90%;
+    border-radius: 25px;
+    padding: 20px;
+  }
+
+  .book-title {
+    font-size: 24px;
+    margin-bottom: 40px;
+  }
+
+  .book-subtitle {
+    font-size: 14px;
+    margin-bottom: 30px;
+  }
+
+  .input-wrapper {
+    width: 90%;
+    height: 50px;
+    margin-bottom: 30px;
+  }
+
+  .search-button {
+    width: 80px;
+    height: 40px;
+    font-size: 14px;
+  }
+}
+
+/* Focus states for accessibility */
+.book-input:focus {
+  outline: 2px solid #cee397;
+  outline-offset: 1px;
+}
+
+.search-button:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}

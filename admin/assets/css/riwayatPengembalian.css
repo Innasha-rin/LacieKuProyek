@@ -1,0 +1,272 @@
+/* Base styles and typography */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1.5;
+}
+
+/* Main container */
+.return-history {
+  background-color: rgba(206, 227, 151, 1);
+  display: flex;
+  padding: 111px 80px;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card container */
+.card {
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  width: 100%;
+  max-width: 2000px;
+  padding: 25px 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card header */
+.card-header {
+  display: flex;
+  width: 2000px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Page title */
+.page-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Search container */
+.search-container {
+  margin-top: 42px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Search input */
+.search-input {
+  border-radius: 8px;
+  background-color: rgba(243, 243, 232, 1);
+  width: 454px;
+  max-width: 100%;
+  padding: 13px 24px;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 300;
+  border: none;
+  outline: none;
+}
+
+/* Table container */
+.table-container {
+  background-color: rgba(255, 255, 255, 1);
+  align-self: stretch;
+  margin-top: 33px;
+  height: 600px;
+  width: 100%;
+  overflow-y: auto;
+  overflow-x: hidden;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  cursor: grab;
+  scrollbar-width: thin;
+  scrollbar-color: rgba(206, 227, 151, 0.7) rgba(243, 243, 232, 0.5);
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: rgba(243, 243, 232, 0.5);
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background-color: rgba(206, 227, 151, 0.7);
+  border-radius: 4px;
+}
+
+.table-container.grabbing {
+  cursor: grabbing;
+}
+
+.no-results {
+  padding: 20px;
+  text-align: center;
+  font-weight: 500;
+  color: #666;
+  width: 100%;
+  display: none;
+}
+
+/* Table */
+.return-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header */
+.table-header {
+  background-color: rgba(243, 243, 232, 1);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-weight: 600;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+/* Table rows */
+.table-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+/* Table cells - common styles */
+.column-no,
+.column-name,
+.column-nim,
+.column-book,
+.column-borrow-date,
+.column-return-date,
+.column-status,
+.column-late-days,
+.column-fine {
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  gap: 10px;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+}
+
+/* Specific column styles */
+.column-no {
+  min-width: 40px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-name {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-nim {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-book {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-borrow-date {
+  padding: 10px 4px;
+  flex-basis: 12px;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-return-date {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-status {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  font-weight: 500;
+}
+
+.column-status .status-baik {
+  color: #22c55e;
+  font-weight: 600;
+}
+
+.column-status .status-bermasalah {
+  color: #e90000;
+  font-weight: 600;
+}
+
+.column-late-days {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+.column-fine {
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+}
+
+/* Responsive styles */
+@media (max-width: 991px) {
+  .return-history {
+    padding: 100px 20px;
+  }
+
+  .card {
+    max-width: 100%;
+    padding: 25px 20px;
+  }
+
+  .search-input {
+    padding: 13px 20px;
+    margin-top: 40px;
+  }
+
+  .table-container {
+    max-width: 100%;
+  }
+
+  .table-header {
+    max-width: 100%;
+  }
+
+  .table-row {
+    max-width: 100%;
+  }
+
+  /* Adjust column widths on smaller screens */
+  .column-no,
+  .column-name,
+  .column-nim,
+  .column-book,
+  .column-borrow-date,
+  .column-return-date,
+  .column-status,
+  .column-late-days,
+  .column-fine {
+    min-width: 80px;
+    padding: 10px 5px;
+  }
+}

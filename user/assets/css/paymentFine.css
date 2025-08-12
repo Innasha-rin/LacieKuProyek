@@ -1,0 +1,328 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding-top: 20px;
+  background-color: #cee397;
+}
+
+.payment-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-color: #cee397;
+}
+
+.navigation-back {
+  position: absolute;
+  left: 125px;
+  top: 103px;
+  cursor: pointer;
+  background: none;
+  border: none;
+  padding: 0;
+}
+
+.back-icon {
+  width: 43px;
+  height: 27px;
+}
+
+.payment-card {
+  border-radius: 50px;
+  padding: 45px;
+  margin-top: 30px;
+  width: 100%;
+  max-width: 846px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  box-sizing: border-box;
+}
+
+.payment-title {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 38px;
+  text-align: center;
+}
+
+.fine-description {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  margin-bottom: 12px;
+  text-align: center;
+}
+
+.fine-amount {
+  font-family: "Inter", sans-serif;
+  font-size: 40px;
+  font-weight: 700;
+  margin-bottom: 68px;
+  text-align: center;
+}
+
+.qris-title {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.qris-code {
+  width: 100%;
+  max-width: 306px;
+  height: auto;
+  margin-bottom: 58px;
+}
+
+.payment-actions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  width: 100%;
+}
+
+.spacer {
+  height: 80px; /* beri tinggi sesuai tinggi header */
+}
+
+.file-upload-label {
+  width: 100%;
+  max-width: 234px;
+  height: 46px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  color: white;
+  cursor: pointer;
+  background-color: #f3f3e8;
+  transition: background-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.file-upload-label:hover {
+  background-color: #0056b3;
+}
+
+.upload-text {
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 300;
+  color: rgba(0, 0, 0, 0.5);
+}
+
+.upload-icon {
+  width: 24px;
+  height: 24px;
+}
+
+.payment-submit {
+  width: 100%;
+  max-width: 207px;
+  height: 46px;
+  border-radius: 8px;
+  font-family: "Inter", sans-serif;
+  font-size: 15px;
+  font-weight: 700;
+  cursor: pointer;
+  background-color: #fcf876;
+  border: none;
+  box-sizing: border-box;
+}
+
+.status-container {
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 8px;
+    background-color: #f8f9fa;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.status-success { background-color: #d4edda; border-left: 4px solid #28a745; }
+.status-warning { background-color: #fff3cd; border-left: 4px solid #ffc107; }
+.status-error { background-color: #f8d7da; border-left: 4px solid #dc3545; }
+.status-info { background-color: #d1ecf1; border-left: 4px solid #17a2b8; }
+.timestamp { font-size: 0.9em; color: #666; margin-top: 5px; }
+
+/* Tablet responsiveness */
+@media (max-width: 991px) {
+  .navigation-back {
+    left: 20px;
+    top: 20px;
+  }
+
+  .payment-card {
+    width: 90%;
+    padding: 35px;
+    margin-top: 20px;
+  }
+  
+  .payment-title {
+    font-size: 35px;
+    margin-bottom: 30px;
+  }
+  
+  .fine-amount {
+    font-size: 35px;
+    margin-bottom: 50px;
+  }
+  
+  .qris-code {
+    max-width: 280px;
+    margin-bottom: 45px;
+  }
+}
+
+/* Mobile responsiveness */
+@media (max-width: 640px) {
+  .payment-container {
+    padding: 10px;
+  }
+
+  .payment-card {
+    width: 100%;
+    padding: 30px 20px;
+    border-radius: 25px;
+    margin-top: 10px;
+    min-height: 70vh;
+  }
+
+  .payment-title {
+    font-size: 36px;
+    margin-bottom: 30px;
+  }
+
+  .fine-description {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .fine-amount {
+    font-size: 36px;
+    margin-bottom: 50px;
+  }
+
+  .qris-title {
+    font-size: 18px;
+    margin-bottom: 20px;
+  }
+
+  .qris-code {
+    max-width: 280px;
+    margin-bottom: 40px;
+  }
+
+  .file-upload-label {
+    max-width: 100%;
+    height: 56px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .upload-text {
+    font-size: 16px;
+  }
+
+  .upload-icon {
+    width: 24px;
+    height: 24px;
+  }
+
+  .payment-submit {
+    max-width: 100%;
+    height: 56px;
+    font-size: 16px;
+    padding: 0 20px;
+  }
+
+  .status-container {
+    margin: 20px 0;
+    padding: 20px;
+    font-size: 16px;
+  }
+
+  .status-container p {
+    margin: 8px 0;
+    line-height: 1.5;
+  }
+
+  .status-container h3 {
+    font-size: 18px;
+    margin-bottom: 15px;
+  }
+
+  .payment-actions {
+    gap: 20px;
+  }
+}
+
+/* Extra small mobile devices */
+@media (max-width: 480px) {
+  .payment-card {
+    padding: 25px 15px;
+    border-radius: 20px;
+    min-height: 75vh;
+  }
+
+  .payment-title {
+    font-size: 32px;
+    margin-bottom: 25px;
+  }
+
+  .fine-description {
+    font-size: 16px;
+  }
+
+  .fine-amount {
+    font-size: 32px;
+    margin-bottom: 40px;
+  }
+
+  .qris-code {
+    max-width: 260px;
+    margin-bottom: 35px;
+  }
+
+  .qris-title {
+    font-size: 16px;
+  }
+
+  .file-upload-label {
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .payment-submit {
+    height: 52px;
+    font-size: 15px;
+  }
+
+  .status-container {
+    padding: 18px;
+    font-size: 15px;
+  }
+}
+
+/* Large screens optimization */
+@media (min-width: 1200px) {
+  .payment-container {
+    padding: 40px;
+  }
+  
+  .payment-card {
+    padding: 60px;
+    margin-top: 40px;
+  }
+}

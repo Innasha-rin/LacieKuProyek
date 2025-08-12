@@ -1,0 +1,490 @@
+/* Base styles */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  color: rgba(0, 0, 0, 1);
+  line-height: 1.5;
+}
+
+/* Main container */
+.payment-history {
+  background-color: rgba(206, 227, 151, 1);
+  display: flex;
+  padding: 111px 80px;
+  flex-direction: column;
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Card container */
+.history-card {
+  border-radius: 50px;
+  background-color: rgba(255, 255, 255, 1);
+  display: flex;
+  width: 100%;
+  max-width: 2000px;
+  padding: 27px 80px;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Inner container */
+.history-container {
+  display: flex;
+  width: 2000px;
+  max-width: 100%;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* Header and title */
+.history-title {
+  font-size: 40px;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Search input */
+.search-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 37px;
+}
+
+.search-input {
+  border-radius: 8px;
+  background-color: rgba(243, 243, 232, 1);
+  width: 454px;
+  max-width: 100%;
+  padding: 13px 24px;
+  font-size: 15px;
+  color: #000000;
+  font-weight: 300;
+  border: none;
+  font-family: inherit;
+}
+
+/* Table container - Desktop */
+.table-container {
+  background-color: rgba(255, 255, 255, 1);
+  align-self: stretch;
+  margin-top: 31px;
+  height: 602px;
+  width: 100%;
+  overflow-y: auto;
+  font-size: 14px;
+  font-weight: 400;
+  text-align: center;
+  cursor: grab;
+  position: relative;
+  user-select: none;
+}
+
+.table-container:active {
+  cursor: grabbing;
+}
+
+.table-container::-webkit-scrollbar {
+  width: 8px;
+}
+
+.table-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb {
+  background: #cee397;
+  border-radius: 4px;
+}
+
+.table-container::-webkit-scrollbar-thumb:hover {
+  background: #b8cc7a;
+}
+
+/* Table styles */
+.payment-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+/* Table header */
+.table-header-row {
+  background-color: rgba(243, 243, 232, 1);
+  display: flex;
+  width: 100%;
+  align-items: center;
+  font-weight: 600;
+  justify-content: start;
+  flex-wrap: wrap;
+}
+
+.table-header-cell {
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  gap: 10px;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* Table rows */
+.table-row {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: start;
+  flex-wrap: wrap;
+  transition: background-color 0.2s ease;
+}
+
+.table-row.hidden {
+  display: none;
+}
+
+.table-row:hover {
+  background-color: rgba(243, 243, 232, 0.5);
+}
+
+/* Table cells */
+.table-cell {
+  align-self: stretch;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 10px;
+  gap: 10px;
+  flex: 1;
+  flex-shrink: 1;
+  flex-basis: 0%;
+  text-align: center;
+}
+
+/* Mobile Card Layout - Hidden by default */
+.mobile-cards-container {
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  margin-top: 31px;
+  max-height: 602px;
+  overflow-y: auto;
+  padding: 0 4px;
+}
+
+.mobile-cards-container::-webkit-scrollbar {
+  width: 6px;
+}
+
+.mobile-cards-container::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 3px;
+}
+
+.mobile-cards-container::-webkit-scrollbar-thumb {
+  background: #cee397;
+  border-radius: 3px;
+}
+
+.payment-card {
+  background-color: #ffffff;
+  border: 1px solid #e5e5e5;
+  border-radius: 12px;
+  padding: 16px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.payment-card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+}
+
+.payment-card.hidden {
+  display: none;
+}
+
+.card-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 12px;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.card-id {
+  font-size: 14px;
+  font-weight: 600;
+  color: #666;
+}
+
+.card-number {
+  font-size: 12px;
+  background-color: #f3f3e8;
+  padding: 4px 8px;
+  border-radius: 6px;
+  color: #333;
+}
+
+.card-title {
+  font-size: 16px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.4;
+}
+
+.card-details {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.card-detail {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-detail-label {
+  font-size: 12px;
+  color: #666;
+  margin-bottom: 4px;
+  font-weight: 500;
+}
+
+.card-detail-value {
+  font-size: 14px;
+  color: #333;
+  font-weight: 400;
+}
+
+.card-amount {
+  font-weight: 600;
+  color: #2d5a27;
+}
+
+.card-status-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.card-dates {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 8px;
+  font-size: 12px;
+  color: #666;
+}
+
+.date-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.date-row:last-child {
+  border-bottom: none;
+}
+
+.date-label {
+  font-weight: 500;
+}
+
+.date-value {
+  color: #333;
+}
+
+/* ID Peminjaman styling */
+.id-peminjaman {
+  color: #000000;
+  padding: 4px 8px;
+  font-size: 14px;
+}
+
+/* No data message */
+.no-data {
+  font-style: italic;
+  color: #666;
+  padding: 40px 20px;
+  text-align: center;
+}
+
+.mobile-no-data {
+  text-align: center;
+  padding: 40px 20px;
+  color: #666;
+  font-style: italic;
+  background-color: #f9f9f9;
+  border-radius: 12px;
+  border: 1px solid #e5e5e5;
+}
+
+/* Date text styling */
+.date-text {
+  font-size: 12px;
+  color: #333;
+  font-weight: 400;
+}
+
+.no-date {
+  font-size: 12px;
+  color: #999;
+  font-style: italic;
+}
+
+/* Status badges */
+.status-badge, .verification-badge {
+  padding: 6px 12px;
+  border-radius: 12px;
+  font-size: 12px;
+  font-weight: 500;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+
+/* Payment status badges */
+.status-lunas {
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+}
+
+.status-belum-bayar {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Verification status badges */
+.verification-belum-diverifikasi {
+  background-color: #fff3cd;
+  color: #856404;
+  border: 1px solid #ffeaa7;
+}
+
+.verification-valid {
+  background-color: #d1ecf1;
+  color: #0c5460;
+  border: 1px solid #bee5eb;
+}
+
+.verification-tidak-valid {
+  background-color: #f8d7da;
+  color: #721c24;
+  border: 1px solid #f5c6cb;
+}
+
+/* Tablet styles */
+@media (max-width: 1024px) {
+  .payment-history {
+    padding: 100px 40px;
+  }
+
+  .history-card {
+    padding: 27px 40px;
+  }
+
+  .table-header-cell,
+  .table-cell {
+    font-size: 13px;
+    padding: 8px 6px;
+  }
+}
+
+/* Mobile styles */
+@media (max-width: 768px) {
+  .payment-history {
+    padding: 80px 20px;
+  }
+
+  .history-card {
+    max-width: 100%;
+    padding: 20px;
+    border-radius: 20px;
+  }
+
+  .history-title {
+    font-size: 28px;
+  }
+
+  .search-input {
+    width: 100%;
+    padding: 12px 16px;
+    font-size: 14px;
+  }
+
+  /* Hide table on mobile */
+  .table-container {
+    display: none;
+  }
+
+  /* Show mobile cards */
+  .mobile-cards-container {
+    display: flex;
+  }
+}
+
+/* Small mobile styles */
+@media (max-width: 480px) {
+  .payment-history {
+    padding: 60px 16px;
+  }
+
+  .history-card {
+    padding: 16px;
+  }
+
+  .history-title {
+    font-size: 24px;
+  }
+
+  .card-details {
+    grid-template-columns: 1fr;
+    gap: 8px;
+  }
+
+  .card-status-row {
+    flex-direction: column;
+    gap: 6px;
+  }
+
+  .status-badge, .verification-badge {
+    padding: 4px 10px;
+    font-size: 11px;
+  }
+
+  .card-title {
+    font-size: 15px;
+  }
+
+  .card-detail-value {
+    font-size: 13px;
+  }
+
+  .date-row {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+  }
+}

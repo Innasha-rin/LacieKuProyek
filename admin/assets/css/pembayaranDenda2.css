@@ -1,0 +1,168 @@
+
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+      }
+
+      body {
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 15px;
+        color: #000000;
+        font-weight: 300;
+      }
+
+      .payment-fine-container {
+        background-color: rgba(206, 227, 151, 1);
+        display: flex;
+        padding: 95px 80px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+        min-height: 100vh;
+      }
+
+      .payment-card {
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        width: 846px;
+        max-width: 100%;
+        padding: 41px 80px 77px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .payment-form {
+        display: flex;
+        width: 374px;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .payment-title {
+        color: rgba(0, 0, 0, 1);
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        align-self: stretch;
+      }
+
+      .input-field {
+        border-radius: 8px;
+        background-color: rgba(243, 243, 232, 1);
+        width: 234px;
+        max-width: 100%;
+        padding: 14px 20px;
+        border: none;
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 15px;
+        color: #000000;
+        font-weight: 300;
+      }
+
+      .name-field {
+        margin-top: 41px;
+      }
+
+      .nim-field {
+        margin-top: 38px;
+      }
+
+      .book-title-field {
+        margin-top: 39px;
+      }
+
+      .total-fine-field {
+        margin-top: 40px;
+        padding-bottom: 23px;
+      }
+
+      .download-button {
+        border-radius: 8px;
+        background-color: rgba(206, 227, 151, 1);
+        margin-top: 42px;
+        width: 195px;
+        max-width: 100%;
+        padding: 9px 10px;
+        color: rgba(255, 255, 255, 1);
+        border: none;
+        cursor: pointer;
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      .accept-button {
+        border-radius: 8px;
+        background-color: rgba(206, 227, 151, 1);
+        margin-top: 42px;
+        width: 114px;
+        max-width: 100%;
+        padding: 9px 33px;
+        color: rgba(255, 255, 255, 1);
+        border: none;
+        cursor: pointer;
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        font-size: 15px;
+        font-weight: 300;
+        text-align: center;
+      }
+
+      @media (max-width: 991px) {
+        .payment-fine-container {
+          padding: 100px 20px;
+        }
+
+        .payment-card {
+          padding: 41px 20px 77px;
+        }
+
+        .name-field {
+          margin-top: 40px;
+        }
+
+        .nim-field {
+          padding-right: 20px;
+        }
+
+        .book-title-field {
+          padding-right: 20px;
+        }
+
+        .total-fine-field {
+          padding-right: 20px;
+        }
+
+        .download-button {
+          margin-top: 40px;
+        }
+
+        .accept-button {
+          padding: 9px 20px;
+          margin-top: 40px;
+        }
+      }

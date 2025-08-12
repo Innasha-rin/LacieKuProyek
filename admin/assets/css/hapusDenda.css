@@ -1,0 +1,107 @@
+      /* Base styles and font */
+      body {
+        margin: 0;
+        padding: 0;
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+        color: rgba(0, 0, 0, 1);
+      }
+
+      /* Main container */
+      .delete-book-container {
+        background-color: rgba(206, 227, 151, 1);
+        display: flex;
+        padding: 186px 80px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Confirmation card */
+      .confirmation-card {
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        width: 846px;
+        max-width: 100%;
+        padding: 219px 80px;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+      }
+
+      /* Content wrapper */
+      .confirmation-content {
+        display: flex;
+        margin-bottom: -44px;
+        width: 428px;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      /* Title styling */
+      .confirmation-title {
+        font-size: 40px;
+        font-weight: 700;
+        text-align: center;
+        margin: 0;
+      }
+
+      /* Warning message */
+      .confirmation-warning {
+        font-size: 20px;
+        font-weight: 400;
+        text-align: center;
+        align-self: stretch;
+        margin-top: 59px;
+        margin-bottom: 0;
+      }
+
+      /* Delete button */
+      .delete-button {
+        border: none;
+        cursor: pointer;
+        border-radius: 8px;
+        background-color: rgba(206, 227, 151, 1);
+        margin-top: 58px;
+        width: 114px;
+        max-width: 100%;
+        padding: 11px 36px;
+        font-size: 15px;
+        color: rgba(255, 255, 255, 1);
+        font-weight: 300;
+        white-space: nowrap;
+        font-family: inherit;
+      }
+
+      /* Responsive styles */
+      @media (max-width: 991px) {
+        .delete-book-container {
+          padding: 100px 20px;
+        }
+
+        .confirmation-card {
+          padding: 100px 20px;
+        }
+
+        .confirmation-content {
+          margin-bottom: 10px;
+        }
+
+        .confirmation-warning {
+          max-width: 100%;
+          margin-top: 40px;
+        }
+
+        .delete-button {
+          padding: 11px 20px;
+          margin-top: 40px;
+          white-space: initial;
+        }
+      }

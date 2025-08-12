@@ -1,0 +1,160 @@
+      * {
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+        font-family:
+          Inter,
+          -apple-system,
+          Roboto,
+          Helvetica,
+          sans-serif;
+      }
+
+      .login-page {
+        background-color: rgba(206, 227, 151, 1);
+        display: flex;
+        padding: 101px 80px;
+        flex-direction: column;
+        overflow: hidden;
+        align-items: center;
+        font-size: 15px;
+        color: #000000;
+        font-weight: 300;
+        white-space: nowrap;
+        justify-content: center;
+      }
+
+      .login-container {
+        display: flex;
+        width: 846px;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .logo {
+        aspect-ratio: 0.96;
+        object-fit: contain;
+        object-position: center;
+        width: 145px;
+        align-self: center;
+        max-width: 100%;
+      }
+
+      .login-card {
+        border-radius: 50px;
+        background-color: rgba(255, 255, 255, 1);
+        display: flex;
+        margin-top: 19px;
+        padding: 74px 80px 191px;
+        flex-direction: column;
+        align-items: center;
+      }
+
+      .login-form {
+        display: flex;
+        margin-bottom: -38px;
+        width: 454px;
+        max-width: 100%;
+        flex-direction: column;
+        align-items: stretch;
+      }
+
+      .login-heading {
+        color: rgba(0, 0, 0, 1);
+        font-size: 40px;
+        font-weight: 700;
+        align-self: center;
+      }
+
+      .email-input {
+        border-radius: 8px;
+        background-color: rgba(243, 243, 232, 1);
+        margin-top: 104px;
+        padding: 18px 37px 28px;
+        border: none;
+        font-size: 15px;
+        font-weight: 300;
+        color: #000000;
+        width: 100%;
+      }
+
+      .password-input {
+        border-radius: 8px;
+        background-color: rgba(243, 243, 232, 1);
+        margin-top: 44px;
+        padding: 17px 39px 29px;
+        border: none;
+        font-size: 15px;
+        font-weight: 300;
+        color: #000000;
+        width: 100%;
+      }
+
+      .login-button {
+        border-radius: 8px;
+        background-color: rgba(206, 227, 151, 1);
+        align-self: center;
+        margin-top: 43px;
+        width: 110px;
+        max-width: 100%;
+        padding: 11px 37px 18px;
+        color: rgba(255, 255, 255, 1);
+        border: none;
+        font-size: 15px;
+        font-weight: 300;
+        cursor: pointer;
+        display: block;
+        text-align: center;
+      }
+
+      .forgot-password {
+        color: rgba(55, 151, 164, 1);
+        font-weight: 400;
+        margin-top: 44px;
+        padding-top: 80px;
+        text-decoration: none;
+      }
+
+      @media (max-width: 991px) {
+        .login-page {
+          padding: 101px 20px 100px;
+          white-space: initial;
+        }
+
+        .login-container {
+          white-space: initial;
+        }
+
+        .login-card {
+          max-width: 100%;
+          padding: 74px 20px 100px;
+          white-space: initial;
+        }
+
+        .login-form {
+          margin-bottom: 10px;
+          white-space: initial;
+        }
+
+        .email-input {
+          max-width: 100%;
+          padding: 18px 20px 28px;
+          margin-top: 40px;
+          white-space: initial;
+        }
+
+        .password-input {
+          max-width: 100%;
+          padding: 17px 20px 29px;
+          margin-top: 40px;
+          white-space: initial;
+        }
+
+        .login-button {
+          padding: 11px 20px 18px;
+          margin-top: 40px;
+          white-space: initial;
+        }
+      }
+

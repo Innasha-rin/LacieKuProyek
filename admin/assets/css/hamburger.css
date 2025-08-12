@@ -1,0 +1,121 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header styling - making it sticky */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+    position: fixed; /* Make the header fixed */
+    top: 0; /* Stick to the top */
+    left: 0; /* Align to the left edge */
+    width: 100%; /* Full width */
+    z-index: 1000; /* Ensure it stays on top of other elements */
+}
+
+/* Add padding to body to prevent content from hiding under fixed header */
+body {
+    padding-top: 70px; /* Adjust based on your header height */
+}
+
+/* Logo or site title */
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+/* Hamburger icon */
+.hamburger {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 24px;
+    cursor: pointer;
+    z-index: 100;
+}
+
+.hamburger span {
+    display: block;
+    height: 3px;
+    width: 100%;
+    background-color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Hamburger icon animation for open state */
+.hamburger.active span:nth-child(1) {
+    transform: translateY(10px) rotate(45deg);
+}
+
+.hamburger.active span:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active span:nth-child(3) {
+    transform: translateY(-10px) rotate(-45deg);
+}
+
+/* Navigation menu - position relative to fixed header now, not the page */
+.nav-menu {
+    position: fixed;
+    top: 70px; /* Adjust based on header height */
+    right: -300px;
+    width: 250px;
+    background-color: white;
+    height: auto;
+    max-height: calc(100vh - 80px); /* Limit height and allow scrolling if needed */
+    overflow-y: auto; /* Add scrolling if menu is taller than viewport */
+    transition: right 0.3s ease;
+    box-shadow: -2px 0 5px rgba(0,0,0,0.1);
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    z-index: 999; /* Just below header z-index */
+}
+
+.nav-menu.active {
+    right: 10px;
+}
+
+/* Menu items */
+.nav-item {
+    border-bottom: 1px solid #eee;
+    padding: 10px 15px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+a {
+    text-decoration: none; /* Menghilangkan garis bawah */
+    color: inherit;
+}
+
+.nav-item:hover {
+    background-color: #f5f5f5;
+}
+
+.nav-item:last-child {
+    border-bottom: none;
+}
+
+/* Active menu item */
+.nav-item.active {
+    background-color: #f0f0f0;
+    border-left: 3px solid #4CAF50;
+}
+
+/* Current item highlight (example for "Keluar") */
+.nav-item.highlight {
+    background-color: #FFEB3B;
+    /* Semua properti alignment dan sizing sama dengan .nav-item */
+    padding: 15px 15px; /* Padding yang sama */
+    display: flex; /* Flexbox yang sama */
+    align-items: center; /* Alignment yang sama */
+}
