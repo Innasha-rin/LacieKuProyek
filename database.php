@@ -1,7 +1,7 @@
 <?php
 $host = "localhost";
 $dbname = "ollieproject_db";
-$username = "ollieproject";  // Sesuaikan dengan username database
+$username = "root";  // Sesuaikan dengan username database
 $password = "_Sjdv83_91Q2QcOuC(";  // Sesuaikan dengan password database
 
 try {
