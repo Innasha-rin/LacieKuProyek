@@ -1,8 +1,8 @@
 <?php
 $host = "localhost";
-$dbname = "ollie1";
-$username = "root";  // Sesuaikan dengan username database
-$password = "";  // Sesuaikan dengan password database
+$dbname = "ollieproject_db";
+$username = "ollieproject";  // Sesuaikan dengan username database
+$password = "_Sjdv83_91Q2QcOuC(";  // Sesuaikan dengan password database
 
 try {
     $conn = new PDO("mysql:host=$host;dbname=$dbname;charset=utf8", $username, $password);
