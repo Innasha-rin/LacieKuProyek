@@ -1,9 +1,9 @@
 <?php
 // Konfigurasi database
-$host = "localhost";
-$dbname = "ollie1";
-$username = "root";
-$password = "";
+$host = "sgp.domcloud.co";
+$dbname = "ollie_project_db";
+$username = "ollie-project";  // Sesuaikan dengan username database
+$password = "4)_xZEF6+R7jhq9dU5";  // Sesuaikan dengan password database
 
 // Class Database untuk file yang membutuhkan OOP approach
 class Database {
