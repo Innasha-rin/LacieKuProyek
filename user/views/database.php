@@ -1,16 +1,16 @@
 <?php
 // Konfigurasi database
 $host = "sgp.domcloud.co";
-$dbname = "ollie_project_db";
-$username = "ollie-project";  // Sesuaikan dengan username database
-$password = "4)_xZEF6+R7jhq9dU5";  // Sesuaikan dengan password database
+$dbname = "project_ollie_db";
+$username = "project-ollie";  // Sesuaikan dengan username database
+$password = "XhC86(Zh6)g67YTio(";  // Sesuaikan dengan password database
 
 // Class Database untuk file yang membutuhkan OOP approach
 class Database {
-    private $host = "localhost";
-    private $db_name = "ollie1";
-    private $username = "root";
-    private $password = "";
+    private $host = "sgp.domcloud.co";
+    private $db_name = "project_ollie_db";
+    private $username = "project-ollie";
+    private $password = "XhC86(Zh6)g67YTio(";
     public $conn;
 
     public function getConnection() {
