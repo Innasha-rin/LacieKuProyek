@@ -1,5 +1,5 @@
 <?php
-$password_plain = '12345678'; // Ganti dengan password yang kamu inginkan
+$password_plain = 'paswordterkuat2025'; // Ganti dengan password yang kamu inginkan
 $hashed = password_hash($password_plain, PASSWORD_DEFAULT);
 echo "Hash: " . $hashed;
 ?>
